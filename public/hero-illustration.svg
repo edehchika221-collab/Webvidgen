@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <!-- Gradient definitions matching brand colors -->
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="50%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.3"/>
+    </linearGradient>
+
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="videoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#312e81"/>
+      <stop offset="100%" style="stop-color:#581c87"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background glow orbs -->
+  <ellipse cx="200" cy="200" rx="180" ry="150" fill="url(#glowGradient)" filter="url(#softGlow)" opacity="0.4"/>
+  <ellipse cx="600" cy="200" rx="180" ry="150" fill="url(#glowGradient)" filter="url(#softGlow)" opacity="0.4"/>
+
+  <!-- Left side: Website Browser -->
+  <g transform="translate(80, 60)">
+    <!-- Browser frame -->
+    <rect x="0" y="0" width="250" height="180" rx="12" fill="url(#screenGradient)" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Browser top bar -->
+    <rect x="0" y="0" width="250" height="28" rx="12" fill="#1e293b"/>
+    <rect x="0" y="14" width="250" height="14" fill="#1e293b"/>
+
+    <!-- Traffic lights -->
+    <circle cx="16" cy="14" r="5" fill="#ef4444"/>
+    <circle cx="34" cy="14" r="5" fill="#eab308"/>
+    <circle cx="52" cy="14" r="5" fill="#22c55e"/>
+
+    <!-- URL bar -->
+    <rect x="70" y="8" width="170" height="12" rx="6" fill="#0f172a"/>
+    <text x="82" y="17" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">https://website.com</text>
+
+    <!-- Website content mockup -->
+    <rect x="15" y="40" width="220" height="12" rx="2" fill="#6366f1" opacity="0.8"/>
+    <rect x="15" y="58" width="180" height="6" rx="2" fill="#475569"/>
+    <rect x="15" y="68" width="200" height="6" rx="2" fill="#475569"/>
+    <rect x="15" y="78" width="140" height="6" rx="2" fill="#475569"/>
+
+    <!-- Image placeholder -->
+    <rect x="15" y="95" width="100" height="70" rx="6" fill="#334155"/>
+    <circle cx="40" cy="120" r="12" fill="#6366f1" opacity="0.6"/>
+    <path d="M25 150 L50 130 L75 145 L100 125 L115 150" stroke="#a855f7" stroke-width="2" fill="none" opacity="0.8"/>
+
+    <!-- Text blocks -->
+    <rect x="125" y="95" width="110" height="6" rx="2" fill="#475569"/>
+    <rect x="125" y="105" width="95" height="6" rx="2" fill="#475569"/>
+    <rect x="125" y="115" width="100" height="6" rx="2" fill="#475569"/>
+    <rect x="125" y="130" width="80" height="20" rx="4" fill="url(#brandGradient)" opacity="0.9"/>
+  </g>
+
+  <!-- Center: Transformation Arrow with AI spark effects -->
+  <g transform="translate(355, 130)">
+    <!-- Glow background -->
+    <ellipse cx="45" cy="40" rx="50" ry="50" fill="url(#brandGradient)" opacity="0.15" filter="url(#softGlow)"/>
+
+    <!-- Arrow path -->
+    <path d="M0 40 Q45 20 90 40 Q45 60 0 40" fill="none" stroke="url(#brandGradient)" stroke-width="3" filter="url(#glow)"/>
+
+    <!-- Arrow head -->
+    <polygon points="85,40 70,30 70,50" fill="url(#brandGradient)" filter="url(#glow)"/>
+
+    <!-- AI Sparkles -->
+    <g filter="url(#glow)">
+      <path d="M45 10 L47 18 L55 20 L47 22 L45 30 L43 22 L35 20 L43 18 Z" fill="#ec4899"/>
+      <path d="M20 55 L21.5 60 L26.5 61.5 L21.5 63 L20 68 L18.5 63 L13.5 61.5 L18.5 60 Z" fill="#a855f7" opacity="0.9"/>
+      <path d="M70 55 L71.5 60 L76.5 61.5 L71.5 63 L70 68 L68.5 63 L63.5 61.5 L68.5 60 Z" fill="#6366f1" opacity="0.9"/>
+    </g>
+
+    <!-- "AI" text -->
+    <text x="37" y="45" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="url(#brandGradient)">AI</text>
+  </g>
+
+  <!-- Right side: Video Player -->
+  <g transform="translate(470, 60)">
+    <!-- Video frame with gradient border -->
+    <rect x="-2" y="-2" width="254" height="184" rx="14" fill="url(#brandGradient)"/>
+    <rect x="0" y="0" width="250" height="180" rx="12" fill="url(#videoGradient)"/>
+
+    <!-- Video content preview - abstract visualization -->
+    <rect x="10" y="10" width="230" height="130" rx="6" fill="#1e1b4b"/>
+
+    <!-- Abstract video scene -->
+    <rect x="20" y="25" width="80" height="50" rx="4" fill="#6366f1" opacity="0.4"/>
+    <rect x="110" y="25" width="120" height="8" rx="2" fill="#a855f7" opacity="0.6"/>
+    <rect x="110" y="38" width="100" height="6" rx="2" fill="#818cf8" opacity="0.4"/>
+    <rect x="110" y="50" width="80" height="6" rx="2" fill="#818cf8" opacity="0.3"/>
+
+    <!-- Wave animation lines -->
+    <path d="M20 95 Q60 85 100 95 Q140 105 180 95 Q210 87 220 95" stroke="#ec4899" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M20 105 Q50 115 90 105 Q130 95 170 105 Q200 113 220 105" stroke="#a855f7" stroke-width="2" fill="none" opacity="0.5"/>
+    <path d="M20 115 Q70 108 110 115 Q150 122 190 115 Q210 110 220 115" stroke="#6366f1" stroke-width="2" fill="none" opacity="0.4"/>
+
+    <!-- Play button -->
+    <circle cx="125" cy="75" r="25" fill="white" opacity="0.15"/>
+    <polygon points="118,62 118,88 142,75" fill="white" opacity="0.9"/>
+
+    <!-- Video controls bar -->
+    <rect x="10" y="148" width="230" height="24" rx="4" fill="#0f172a"/>
+
+    <!-- Progress bar -->
+    <rect x="50" y="157" width="140" height="6" rx="3" fill="#334155"/>
+    <rect x="50" y="157" width="60" height="6" rx="3" fill="url(#brandGradient)"/>
+    <circle cx="110" cy="160" r="5" fill="white"/>
+
+    <!-- Control icons -->
+    <polygon points="20,156 20,164 28,160" fill="white" opacity="0.8"/>
+    <rect x="200" y="155" width="15" height="10" rx="2" fill="none" stroke="white" stroke-width="1.5" opacity="0.8"/>
+    <rect x="220" y="155" width="12" height="10" rx="1" fill="none" stroke="white" stroke-width="1.5" opacity="0.8"/>
+  </g>
+
+  <!-- Bottom decorative elements -->
+  <g opacity="0.6">
+    <!-- Floating particles -->
+    <circle cx="150" cy="300" r="4" fill="#6366f1" filter="url(#glow)"/>
+    <circle cx="300" cy="330" r="3" fill="#a855f7" filter="url(#glow)"/>
+    <circle cx="500" cy="310" r="5" fill="#ec4899" filter="url(#glow)"/>
+    <circle cx="650" cy="320" r="3" fill="#6366f1" filter="url(#glow)"/>
+
+    <!-- Connecting dots -->
+    <circle cx="100" cy="350" r="2" fill="#818cf8"/>
+    <circle cx="250" cy="360" r="2" fill="#c084fc"/>
+    <circle cx="400" cy="345" r="2" fill="#f472b6"/>
+    <circle cx="550" cy="355" r="2" fill="#818cf8"/>
+    <circle cx="700" cy="350" r="2" fill="#c084fc"/>
+  </g>
+
+  <!-- Subtle grid pattern at bottom -->
+  <g opacity="0.1">
+    <line x1="0" y1="380" x2="800" y2="380" stroke="url(#brandGradient)" stroke-width="1"/>
+    <line x1="0" y1="390" x2="800" y2="390" stroke="url(#brandGradient)" stroke-width="0.5"/>
+  </g>
+</svg>
