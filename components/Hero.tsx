@@ -31,9 +31,18 @@ export const Hero: React.FC<HeroProps> = ({
                 Turn Any Website <br className="hidden md:block" /> Into a Video
             </h1>
 
-            <p className="text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Paste a URL and let our AI analyze the content to generate a high-quality preview video with optional narration.
             </p>
+
+            {/* Hero Illustration */}
+            <div className="mb-10 animate-fade-in">
+                <img
+                    src="/hero-illustration.svg"
+                    alt="Website to video transformation illustration"
+                    className="w-full max-w-2xl mx-auto h-auto drop-shadow-2xl"
+                />
+            </div>
 
             {/* Input Area */}
             <div className="relative max-w-xl mx-auto flex flex-col gap-4">
