@@ -1,0 +1,5 @@
+{
+  "name": "WebVidGen",
+  "description": "Turn any website URL into a stunning AI-generated video preview instantly using Google Gemini Veo.",
+  "requestFramePermissions": []
+}
